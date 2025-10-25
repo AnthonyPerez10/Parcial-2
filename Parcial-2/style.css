@@ -1,0 +1,178 @@
+/* ===== ESTILOS GENERALES ===== */
+body {
+    margin: 0;
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+}
+
+/* ===== MENÚ FIJO SUPERIOR ===== */
+.menu_principal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #003366, #0056b3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    z-index: 1000;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.menu_principal a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 25px;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.menu_principal a:hover {
+    color: #ffcc00;
+    transform: scale(1.1);
+}
+
+/* ===== CONTENIDO PRINCIPAL ===== */
+.Cotenido_principal {
+    text-align: center;
+    padding-top: 120px;
+}
+
+/* Logo principal: imagen de lado a lado */
+.Cotenido_principal img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: contain; /* se ajusta dentro sin recortar */
+    background-color: #fff; /* fondo limpio detrás */
+    border-bottom: 5px solid #0056b3;
+    margin-bottom: 50px;
+    display: block;
+}
+
+.Cotenido_principal h1 {
+    color: #003366;
+    font-size: 2.8rem;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+/* ===== CUADROS DE NOTICIAS ===== */
+.Cuadros {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding-bottom: 50px;
+}
+
+.Cuadros > div:first-child {
+    flex-basis: 100%;
+    text-align: center;
+}
+
+.Cuadros > div:first-child h1 {
+    color: #0056b3;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+/* Cada cuadro individual */
+[class^="cuadro"] {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+[class^="cuadro"]:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.25);
+}
+
+[class^="cuadro"] img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+[class^="cuadro"] p {
+    padding: 15px;
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: #003366;
+    color: #fff;
+    text-align: left;              /* texto principal alineado a la izquierda */
+    padding: 1% 0;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+footer .footer-container {
+    width: 80%;
+    max-width: 1000px;
+}
+
+footer .Titulo h3 {
+    border-bottom: 2px solid #ffcc00;
+    display: inline-block;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+footer .footer-section {
+    margin: 10px 0 20px 0;
+}
+
+footer .footer-section a {
+    color: #ddd;
+    text-decoration: none;
+    display: block;
+    margin: 4px 0;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+footer .footer-section a:hover {
+    color: #ffcc00;
+}
+
+footer .Footer {
+    margin-top: 20px;
+    font-size: 0.85rem;
+    color: #bbb;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 10px;
+    text-align: center;   /* centrado solo para esta línea */
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1000px) {
+    [class^="cuadro"] {
+        width: 45%;
+    }
+}
+
+@media (max-width: 700px) {
+    [class^="cuadro"] {
+        width: 90%;
+    }
+    .menu_principal a {
+        font-size: 16px;
+        margin: 0 10px;
+    }
+}

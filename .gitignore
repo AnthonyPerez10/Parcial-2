@@ -1,0 +1,3 @@
+# Ignorar todos los archivos excepto los .html y .css
+!*.html
+!*.css
