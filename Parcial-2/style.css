@@ -521,6 +521,106 @@ footer .Imagen img {
   color: #003366;
 }
 
+/*===== Para la pagina de contacto =====*/
+/* Contenedor principal con dos columnas */
+.Contenido_contacto {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 140px auto 80px auto;
+    padding: 40px 60px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* Sección izquierda: información de contacto */
+.seccion_izquierda {
+    flex: 0.5; /* ajusta ancho relativo */
+    text-align: left;
+}
+
+.seccion_izquierda .Informacion h2 {
+    color: #003366;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #0056b3;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.seccion_izquierda .Informacion p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* Sección derecha: formulario */
+.seccion_derecha {
+    flex: 0.5; /* ancho igual a la izquierda */
+}
+
+.contacto-form h2 {
+    color: #003366;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #0056b3;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.contacto-form form input,
+.contacto-form form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.contacto-form form button {
+    background-color: #0056b3;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.contacto-form form button:hover {
+    background-color: #003366;
+}
+
+/*===== Estilo del table =====*/
+table.horario {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table.horario th,
+table.horario td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+table.horario th {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+table.horario tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table.horario tr:hover {
+    background-color: #e0e0e0;
+}
+
 /* ===== Responsivo ===== */
 @media (max-width: 900px) {
     .Contenido_vision {
@@ -553,5 +653,17 @@ footer .Imagen img {
     .menu_principal a {
         font-size: 16px;
         margin: 0 10px;
+    }
+}
+
+@media (max-width: 900px) {
+    .Contenido_vision {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .seccion_izquierda,
+    .seccion_derecha {
+        flex: 1;
     }
 }
